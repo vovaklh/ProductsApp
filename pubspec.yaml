@@ -16,6 +16,10 @@ dependencies:
   intl: ^0.17.0
   get_it: ^7.2.0
   injectable: ^1.5.3
+  freezed_annotation: ^1.1.0
+  dio: ^4.0.5
+  retrofit: ^3.0.1+1
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +28,9 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   injectable_generator: ^1.5.3
   build_runner: ^2.1.8
+  freezed: ^1.1.1
+  json_serializable: ^6.1.5
+  retrofit_generator: ^4.0.1
 
 flutter:
   uses-material-design: true
