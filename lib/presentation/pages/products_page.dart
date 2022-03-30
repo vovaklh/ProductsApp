@@ -92,11 +92,11 @@ class _ProductsPageState extends State<ProductsPage> {
         Expanded(
           flex: 2,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                context.localizations.from,
+                context.localizations.from.toUpperCase(),
                 style: context.text.fromeLabel,
               ),
               const SizedBox(height: 10),
@@ -122,7 +122,7 @@ class _ProductsPageState extends State<ProductsPage> {
 
   Widget _buildCartButton() {
     return CircleAvatar(
-      radius: 30,
+      radius: 24,
       backgroundColor: context.color.cartBackground,
       child: IconButton(
         icon: Icon(
