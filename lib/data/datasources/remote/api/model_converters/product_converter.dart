@@ -14,6 +14,7 @@ class ProductConverter implements ModelConverter<ProductModel, Product> {
     return Product(
       id: model.id,
       title: model.title,
+      description: model.description,
       price: model.price,
       category: model.category,
       image: model.image,

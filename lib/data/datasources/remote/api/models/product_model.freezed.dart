@@ -25,6 +25,7 @@ class _$ProductModelTearOff {
   _ProductModel call(
       {required int id,
       required String title,
+      required String description,
       required double price,
       required String category,
       required String image,
@@ -32,6 +33,7 @@ class _$ProductModelTearOff {
     return _ProductModel(
       id: id,
       title: title,
+      description: description,
       price: price,
       category: category,
       image: image,
@@ -51,6 +53,7 @@ const $ProductModel = _$ProductModelTearOff();
 mixin _$ProductModel {
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
   String get category => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
@@ -70,6 +73,7 @@ abstract class $ProductModelCopyWith<$Res> {
   $Res call(
       {int id,
       String title,
+      String description,
       double price,
       String category,
       String image,
@@ -90,6 +94,7 @@ class _$ProductModelCopyWithImpl<$Res> implements $ProductModelCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? title = freezed,
+    Object? description = freezed,
     Object? price = freezed,
     Object? category = freezed,
     Object? image = freezed,
@@ -103,6 +108,10 @@ class _$ProductModelCopyWithImpl<$Res> implements $ProductModelCopyWith<$Res> {
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       price: price == freezed
           ? _value.price
@@ -141,6 +150,7 @@ abstract class _$ProductModelCopyWith<$Res>
   $Res call(
       {int id,
       String title,
+      String description,
       double price,
       String category,
       String image,
@@ -164,6 +174,7 @@ class __$ProductModelCopyWithImpl<$Res> extends _$ProductModelCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? title = freezed,
+    Object? description = freezed,
     Object? price = freezed,
     Object? category = freezed,
     Object? image = freezed,
@@ -177,6 +188,10 @@ class __$ProductModelCopyWithImpl<$Res> extends _$ProductModelCopyWithImpl<$Res>
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       price: price == freezed
           ? _value.price
@@ -204,6 +219,7 @@ class _$_ProductModel implements _ProductModel {
   const _$_ProductModel(
       {required this.id,
       required this.title,
+      required this.description,
       required this.price,
       required this.category,
       required this.image,
@@ -217,6 +233,8 @@ class _$_ProductModel implements _ProductModel {
   @override
   final String title;
   @override
+  final String description;
+  @override
   final double price;
   @override
   final String category;
@@ -227,7 +245,7 @@ class _$_ProductModel implements _ProductModel {
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, title: $title, price: $price, category: $category, image: $image, rating: $rating)';
+    return 'ProductModel(id: $id, title: $title, description: $description, price: $price, category: $category, image: $image, rating: $rating)';
   }
 
   @override
@@ -237,6 +255,8 @@ class _$_ProductModel implements _ProductModel {
             other is _ProductModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
             const DeepCollectionEquality().equals(other.price, price) &&
             const DeepCollectionEquality().equals(other.category, category) &&
             const DeepCollectionEquality().equals(other.image, image) &&
@@ -248,6 +268,7 @@ class _$_ProductModel implements _ProductModel {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(price),
       const DeepCollectionEquality().hash(category),
       const DeepCollectionEquality().hash(image),
@@ -268,6 +289,7 @@ abstract class _ProductModel implements ProductModel {
   const factory _ProductModel(
       {required int id,
       required String title,
+      required String description,
       required double price,
       required String category,
       required String image,
@@ -280,6 +302,8 @@ abstract class _ProductModel implements ProductModel {
   int get id;
   @override
   String get title;
+  @override
+  String get description;
   @override
   double get price;
   @override
