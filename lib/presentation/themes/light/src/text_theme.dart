@@ -37,6 +37,7 @@ class _LightProductsAppTextThemeData implements ProductsAppTextThemeData {
   @override
   TextStyle get fromeLabel => _bodyText2.copyWith(
         color: _AppColors.black,
+        fontWeight: FontWeight.bold,
       );
 
   @override
